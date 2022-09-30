@@ -5,4 +5,20 @@
 //  Created by Никита Думкин on 29.09.2022.
 //
 
-import Foundation
+import UIKit
+
+extension UIButton{
+    func CALayerShadow(
+        width: Double,
+        height: Double,
+        color: CGColor,
+        shadowOpacity: Float = 0.1,
+        shadowRadius: CGFloat = 5
+    )
+    {
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowRadius = shadowRadius
+        self.layer.shadowOffset = CGSize(width: width, height: height)
+        self.layer.shadowColor = color
+    }
+}
